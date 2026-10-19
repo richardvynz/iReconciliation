@@ -2,15 +2,15 @@
 
 _Last updated: 2026-10-19_
 
-## Current: Batch 00 — Repository audit, product research, architecture
-- Research complete; decisions Q1/Q2 and risks R1–R4 resolved (see DECISIONS.md, RISKS.md).
-- Docs created on branch `batch/00-docs` (not pushed or merged).
-- Status: **In Review** — awaiting approval of the Batch 01 plan. Not Done.
+## Batch 00 — Repository audit, research, architecture
+Docs complete on `batch/00-docs` (unmerged). Awaiting merge decision.
 
-## Environment facts (2026-10-19)
-- `java` on PATH: Temurin 25.0.3; `JAVA_HOME`: JDK 21.0.8 (must be corrected for Maven, ADR-005).
-- Maven 3.9.9 installed; wrapper pins 3.10.0 (exists on Maven Central).
-- Docker Desktop daemon was stopped at research time.
-- No build or tests have been run yet.
+## Batch 01 — Application foundation (branch `batch/01-foundation`)
+Status: **In Review** (not Done until the owner accepts).
+- `./mvnw clean verify` on JDK 25: BUILD SUCCESS, 11 tests, 0 failures (2026-10-19).
+- Testcontainers PostgreSQL integration tests exercise Flyway V1 (Docker required).
+- Compose Postgres verified healthy on a spare port (5432 is held by an unrelated existing container).
+- CI workflow written but **not yet run** (nothing pushed).
 
-## Next: Batch 01 — Foundation (plan pending approval)
+## Environment
+- `JAVA_HOME` must point at JDK 25 (README). Shell sessions used `C:\Users\USER\.jdks\temurin-25.0.3`; the permanent machine setting is the owner's to apply.

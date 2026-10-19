@@ -33,3 +33,9 @@ No failing tests are disabled to get green. Batch 01 adds Testcontainers (BOM-ma
 
 ## ADR-007 Git
 Repository initialised; `main` pushed with initial README only (no history rewrite). Work proceeds on `batch/NN-*` branches. No force-push, merge or branch deletion without approval. `.gitignore` to be extended in Batch 01 for secrets and local env files (`.env*`, `*.pem`, `application-local*.yaml` etc.) in addition to existing build and IDE entries. The code baseline is committed only after it builds and tests.
+
+## Batch 01 implementation notes
+- Testcontainers 2.x: `org.testcontainers:testcontainers-postgresql` / `testcontainers-junit-jupiter` plus `spring-boot-testcontainers`; container class is `org.testcontainers.postgresql.PostgreSQLContainer`.
+- Boot 4 `TestRestTemplate` needs an extra `spring-boot-restclient` module that is not on the classpath; web tests use MockMvc instead (no extra dependency).
+- maven-enforcer-plugin 3.5.0 added (not managed by the Boot parent) to require JDK 25+.
+- Compose host port is configurable (`POSTGRES_PORT`) because 5432 is commonly occupied.

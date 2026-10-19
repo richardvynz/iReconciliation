@@ -5,7 +5,7 @@ Statuses: Backlog / Ready / In Progress / In Review / Done / Blocked. Each item 
 | ID | Batch | Item | Priority | Depends on | Status |
 |---|---|---|---|---|---|
 | IR-000 | 00 | Repository audit, architecture, decisions, docs | P0 | — | In Review |
-| IR-001 | 01 | Foundation: Java 25 build/enforcer, datasource config, baseline Flyway migration, Actuator, error model, `Money`, Docker Compose PostgreSQL, Testcontainers integration tests, CI, `.gitignore` hardening, README | P0 | IR-000 | Ready |
+| IR-001 | 01 | Foundation: Java 25 build/enforcer, datasource config, baseline Flyway migration, Actuator, error model, `Money`, Docker Compose PostgreSQL, Testcontainers integration tests, CI, `.gitignore` hardening, README | P0 | IR-000 | In Review |
 | IR-002 | 02 | Security baseline: authentication, roles, audit hooks | P0 | IR-001 | Backlog |
 | IR-003 | 03 | Canonical transaction model; CSV/REST ingestion, idempotent, provenance | P0 | IR-001 | Backlog |
 | IR-004 | 04 | Deterministic reconciliation engine and reproducible runs | P0 | IR-003 | Backlog |
